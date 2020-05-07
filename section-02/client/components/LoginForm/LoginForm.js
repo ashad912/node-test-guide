@@ -62,6 +62,7 @@ const LoginForm = ({ initialValues, onSubmit, validationSchema }) => (
                                     type="submit"
                                     loading={isSubmitting}
                                     data-testid="submit-button"
+                                    dataCy="submit-button"
                                 >
                                     Submit
                                 </Button>

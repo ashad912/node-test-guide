@@ -5,10 +5,11 @@ import classnames from 'classnames'
 // components
 import Loader from '@components/Loader'
 
-const Button = ({ type = 'button', children, disabled, loading }) => (
+const Button = ({ type = 'button', children, disabled, loading, dataCy}) => (
     <button
         type={type}
         disabled={disabled || loading}
+        data-cy={dataCy}
         className={classnames(
             'focus:outline-none rounded-sm hover:bg-emerald-light px-4 py-5 w-full text-white text-xl',
             {
@@ -26,7 +27,8 @@ Button.propTypes = {
     type: PropTypes.string,
     loading: PropTypes.bool,
     disabled: PropTypes.bool,
-    children: PropTypes.any.isRequired
+    children: PropTypes.any.isRequired,
+    dataCy: PropTypes.string
 }
 
 export default Button
